@@ -34,12 +34,12 @@ body {
 body::before {
   content: "";
   position: fixed;
-  top: 0;
+  top: -3svh;
   left: 0;
   right: 0;
   height: 45svh; /* keep your current value */
   z-index: 0;
-  background: url("/antler_logo.png") calc(50% + 3vw) center / contain no-repeat; /* keep yours */
+  background: url("/antler_logo.png") calc(50% + 1vw) 30% / contain no-repeat; /* keep yours */
   pointer-events: none;
 
   /* start hidden, slightly low */
@@ -60,7 +60,7 @@ body::after {
   inset: -50%;
   z-index: 50;
   pointer-events: none;
-  opacity: 0.1;
+  opacity: 0.2;
   mix-blend-mode: overlay;
   background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/><feColorMatrix type='saturate' values='0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
   animation: grain 0.9s steps(6) infinite;
