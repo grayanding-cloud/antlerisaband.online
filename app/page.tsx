@@ -3,9 +3,16 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-const shows = [
-  //{ venue: "Dave's", date: "Nov 8", doors: "Doors at 8", link: "https://www.google.com" },
-  //{ venue: "Empty Bottle", date: "Nov 12", doors: "Doors at 8:30", link: "https://www.bing.com" },
+type Show = {
+  venue: string;
+  date: string;
+  doors: string;
+  link: string;
+};
+
+const shows: Show[] = [
+  // { venue: "Dave's", date: "Nov 8", doors: "Doors at 8", link: "https://www.google.com" },
+  // { venue: "Empty Bottle", date: "Nov 12", doors: "Doors at 8:30", link: "https://www.bing.com" },
 ];
 export default function Home() {
   const [revealed, setRevealed] = useState(false);
